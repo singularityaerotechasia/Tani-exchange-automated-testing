@@ -1,0 +1,34 @@
+Features:
+- Scenario for use case
+
+Step Def:
+- Function yang ada dalam scenario tu. Certain function je will be run dekat sini
+
+Pages: 
+- All function dalam page tu. 
+  Example:
+  - Kalau dashboard ada new session, view report, delete ha semua letak dalam tu
+
+Dummy Data:
+- Data yang nak kena fill in.
+  Example: 
+  Login - {
+            Username: example
+            password: example
+          }
+  
+RunnerClass:
+- nak define which streamline nak run using tags
+
+
+command:
+mvn clean - bersihkan output
+mvn install - compile code termasuk test. let say ada 2 java class (dia run both)
+mvn test - compile second yang ada tag test. let say ada 2 java class (dia run yang ada tag test dekat RunnerClass.java)
+
+report:
+command - allure serve
+delete allure_results kalau guna tag sebab report lama pun dia generate jugak nanti
+
+RunnerClass:
+kalau banyak tag, tulis @tag@tag1
